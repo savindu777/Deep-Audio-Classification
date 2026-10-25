@@ -19,7 +19,7 @@ venv.bak/
 # ==============================================================================
 # Jupyter Notebook Checkpoints & Cache
 # ==============================================================================
-.ipynb_checkpoints
+.ipynb_checkpoints/
 */.ipynb_checkpoints/*
 *-checkpoint.ipynb
 
@@ -65,6 +65,13 @@ checkpoints/
 saved_model/
 saved_models/
 weights/
+
+# ==============================================================================
+# Evaluation Outputs & Generated Results (Uncomment if needed)
+# ==============================================================================
+# results.csv
+# predictions/
+# exports/
 
 # ==============================================================================
 # Training Logs & Experiment Tracking
