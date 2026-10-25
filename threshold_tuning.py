@@ -1,8 +1,3 @@
-"""
-Threshold selection for the Capuchinbird classifier.
-Paste these cells into the notebook after training (they use model, val_ds, test_ds,
-y_val, y_test, recording_files, recording_windows, make_spectrogram, load_audio, BATCH_SIZE).
-"""
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -15,15 +10,7 @@ from sklearn.metrics import precision_recall_curve, roc_curve, average_precision
 # ---------------------------------------------------------------------------
 def pick_threshold(y_true, p, method="fbeta", beta=1.0,
                    min_recall=None, min_precision=None, prior=None):
-    """
-    method:
-      'fbeta'    - maximise F-beta (beta>1 favours recall, beta<1 favours precision)
-      'youden'   - maximise TPR - FPR (balanced errors, ignores class ratio)
-      'recall'   - highest threshold that still gives recall >= min_recall
-      'precision'- lowest threshold that gives precision >= min_precision
-    prior: expected fraction of positive windows in deployment (e.g. 0.03).
-           If given, precision is re-computed for that prior (see note in the reply).
-    """
+
     y_true = np.asarray(y_true).astype(int)
     p = np.asarray(p).reshape(-1)
 
@@ -146,9 +133,3 @@ def sweep_recording_params(cache, true_counts, thresholds=np.arange(0.5, 0.995, 
                                  MAE=np.mean(err), total_err=int(np.sum(err))))
     return pd.DataFrame(rows).sort_values(["MAE", "min_run"]).reset_index(drop=True)
 
-
-# Example:
-# cache = cache_recording_probs(model, recording_files, load_audio, make_spectrogram, SR, SAMPLES)
-# true_counts = {"recording_00.mp3": 4, "recording_01.mp3": 0, ...}   # your own labels
-# table = sweep_recording_params(cache, true_counts)
-# table.head(10)
