@@ -1,0 +1,128 @@
+# ==============================================================================
+# Byte-compiled / optimized / DLL files
+# ==============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# ==============================================================================
+# Virtual Environments
+# ==============================================================================
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# ==============================================================================
+# Jupyter Notebook Checkpoints & Cache
+# ==============================================================================
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+*-checkpoint.ipynb
+
+# ==============================================================================
+# Datasets & Audio Files (Large data files)
+# ==============================================================================
+data/
+dataset/
+datasets/
+raw_data/
+
+# Raw audio formats
+*.wav
+*.mp3
+*.flac
+*.ogg
+*.m4a
+*.aac
+*.wma
+
+# Compressed archive formats (e.g., downloaded datasets)
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# ==============================================================================
+# Machine Learning Models, Weights & Checkpoints
+# ==============================================================================
+*.h5
+*.hdf5
+*.keras
+*.pb
+*.tflite
+*.onnx
+*.pt
+*.pth
+*.ckpt*
+models/
+checkpoints/
+saved_model/
+saved_models/
+weights/
+
+# ==============================================================================
+# Training Logs & Experiment Tracking
+# ==============================================================================
+logs/
+runs/
+wandb/
+.neptune/
+mlruns/
+lightning_logs/
+
+# ==============================================================================
+# Environment variables, credentials & secrets
+# ==============================================================================
+.env
+.env.*
+!.env.example
+!.env.template
+
+# ==============================================================================
+# Operating System Files
+# ==============================================================================
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Linux
+*~
+
+# ==============================================================================
+# Editor / IDE Configurations
+# ==============================================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+
+# ==============================================================================
+# Distribution / Packaging / Testing
+# ==============================================================================
+dist/
+build/
+*.egg-info/
+.eggs/
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
